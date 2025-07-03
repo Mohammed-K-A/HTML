@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: linear-gradient(to right,rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(bg-hero.jpg);
+            width: 100%;
+            height: 100vh;
+            padding-left: 50px;
+            padding-right: 50px;
+            
+        }
+        
+        
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background-size:cover;
+            width: 100%;
+            display: flex;
+
+        }
+
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+        }
+
+        img{
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            margin-top: 0%;
+            margin-left: 55%;
+            position: absolute;
+            animation-name: food;
+            animation-iteration-count: infinite;
+            animation-duration: 50s;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes food {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 50px; padding-top: 10px;display: flex;justify-content: right;">
+        
+        <ul style="display: flex;list-style-type: none;gap: 10px;">
+            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">HOME</a></li>
+            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">ABOUT</a></li>
+            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">SERVICE</a></li>
+            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">MENU</a></li>
+            <li>
+                <select name="" id="" style="background-color: transparent; color: white; border: none; font-size: medium;">
+                    <option selected disabled>PAGES</option>
+                    <option style="color: black;">Booking</option>
+                    <option style="color: black;">Our Team</option>
+                    <option style="color: black;">Testimonial</option>
+                </select>
+            </li>
+            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">CONTACT</a></li>
+            <li><a href="" style="text-decoration: none;background-color: orange;  color: white;padding: 8px;border-radius: 2px; font-family: Verdana, Geneva, Tahoma, sans-serif;">BOOK A TABLE</a></li>
+
+        </ul>
+
+    </div>
+
+    <div>
+        <h1 style="margin-left: 0px; color: orange;">Restoran</h1>
+    </div>
+
+    <div>
+        <br><br>
+        <img src="hero.png" alt="image cannot load">
+        <h1>Enjoy Our<br> Delicious Meal</h1>
+        
+        <br>
+        <p style="color: white;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et<br> eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore<br> erat amet</p>
+        <br><br>
+        <button type="submit" style="width: 170px; height: 50px; padding: 7px; background-color: orange; color: white; border-radius: 4px;">BOOK A TABLE</button>
+        
+    </div>
+    
+    
+</body>
+</html>
