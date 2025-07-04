@@ -4,96 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restoran</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body{
-            background: linear-gradient(to right,rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(bg-hero.jpg);
-            width: 100%;
-            height: 100vh;
-            padding-left: 50px;
-            padding-right: 50px;
-            
-        }
-        
-        
-        h1{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        body {
+            background: linear-gradient(to right, rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)), url(bg-hero.jpg);
+            background-size: cover;
+            min-height: 100vh;
             color: white;
-            background-size:cover;
-            width: 100%;
-            display: flex;
-
-        }
-
-        p{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            display: flex;
         }
 
-        img{
-            height: 500px;
-            width: 500px;
+        .navbar-nav a {
+            color: white !important;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            color: orange !important;
+            font-weight: bold;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-img {
+            max-width: 500px;
+            height: auto;
             border-radius: 50%;
-            margin-top: 0%;
-            margin-left: 55%;
-            position: absolute;
-            animation-name: food;
-            animation-iteration-count: infinite;
-            animation-duration: 50s;
-            animation-timing-function: linear;
-
+            animation: food 50s linear infinite;
         }
+
+        .hero-description {
+            max-width: 600px;
+            line-height: 1.8;
+            color: white;
+        }
+
 
         @keyframes food {
-            from {transform: rotate(0deg);}
-            to {transform: rotate(360deg);}
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .btn-orange {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: none;              /* Disables transition effects */
+        }
+
+        .btn-orange:hover{
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+        }
+
+        select {
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+
+        select option {
+            color: black;
         }
     </style>
 </head>
 <body>
-    <div style="height: 50px; padding-top: 10px;display: flex;justify-content: right;">
-        
-        <ul style="display: flex;list-style-type: none;gap: 10px;">
-            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">HOME</a></li>
-            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">ABOUT</a></li>
-            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">SERVICE</a></li>
-            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">MENU</a></li>
-            <li>
-                <select name="" id="" style="background-color: transparent; color: white; border: none; font-size: medium;">
-                    <option selected disabled>PAGES</option>
-                    <option style="color: black;">Booking</option>
-                    <option style="color: black;">Our Team</option>
-                    <option style="color: black;">Testimonial</option>
-                </select>
-            </li>
-            <li><a href="" style="text-decoration: none;  color: white;padding: 10px;border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">CONTACT</a></li>
-            <li><a href="" style="text-decoration: none;background-color: orange;  color: white;padding: 8px;border-radius: 2px; font-family: Verdana, Geneva, Tahoma, sans-serif;">BOOK A TABLE</a></li>
 
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg px-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi bi-fork"></i> Restoran</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">MENU</a></li>
+                    <li class="nav-item">
+                        <select>
+                            <option selected disabled>PAGES</option>
+                            <option>Booking</option>
+                            <option>Our Team</option>
+                            <option>Testimonial</option>
+                        </select>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-orange" href="#">BOOK A TABLE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- Text Column -->
+            <div class="col-md-6 hero-text">
+                <h1>Enjoy Our <br> Delicious Meal</h1>
+                <p class="hero-description">
+                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+                Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
+                </p>
+                <a class="btn btn-orange mt-4" href="#">BOOK A TABLE</a>
+            </div>
+            <!-- Image Column -->
+            <div class="col-md-6 text-center mt-4 mt-md-0">
+                <img src="hero.png" alt="Delicious Meal" class="hero-img">
+            </div>
+        </div>
     </div>
 
-    <div>
-        <h1 style="margin-left: 0px; color: orange;">Restoran</h1>
-    </div>
-
-    <div>
-        <br><br>
-        <img src="hero.png" alt="image cannot load">
-        <h1>Enjoy Our<br> Delicious Meal</h1>
-        
-        <br>
-        <p style="color: white;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et<br> eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore<br> erat amet</p>
-        <br><br>
-        <button type="submit" style="width: 170px; height: 50px; padding: 7px; background-color: orange; color: white; border-radius: 4px;">BOOK A TABLE</button>
-        
-    </div>
-    
-    
 </body>
 </html>

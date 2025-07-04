@@ -1,0 +1,156 @@
+.text-orange {
+  color: orange;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.navbar-brand img {
+  height: 2em;
+  background-color: orange;
+  margin-right: 10px;
+}
+
+.nav-link,
+.navbar-toggler {
+  color: white !important;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: orange !important;
+}
+.nav-link:hover {
+  color: orange !important;
+  animation: timein 1s;
+  animation-delay: 2s;
+}
+
+@keyframes timein {
+  from {
+    color: white;
+  }
+  to {
+    color: orange;
+  }
+}
+
+.dropdown-menu {
+  background-color: #0f172b;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: orange;
+  color: white;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    background-color: #0f172b;
+  }
+}
+
+.button1,
+.button2 {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover,
+.button2:hover {
+  background-color: rgb(240, 172, 47);
+  cursor: pointer;
+}
+
+.body1 {
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url("img/bg-hero.jpg") center center / cover no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 5rem 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.body2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+}
+
+.body3 {
+  color: white;
+  width: 100%;
+  animation: floatInFromLeft 1s ease-out forwards;
+}
+
+@keyframes floatInFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.original {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+@media (max-width: 992px) {
+  .original {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .body3 {
+    width: 50%;
+    text-align: left;
+  }
+
+  .background-img {
+    width: 50%;
+  }
+}
+
+.body3 h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.body3 p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.background-img {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.background-img img {
+  max-width: 100%;
+  height: auto;
+  animation: rotation 50s linear infinite;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
