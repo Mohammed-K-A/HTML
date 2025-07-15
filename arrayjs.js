@@ -1,4 +1,4 @@
-let fruits=["apple","banana","cherry"];
+// let fruits=["apple","banana","cherry"];
 // console.log(fruits);                                   // o/p: [ 'apple', 'banana', 'cherry' ]
 
 
@@ -219,3 +219,36 @@ let fruits=["apple","banana","cherry"];
 
 // console.log(Object.entries(person));                           // Output: [["name", "Alice"], ["age", 26], ["isStudent", true]]
 
+
+
+
+
+
+// Qns
+
+// write a program to print only fruits with more than 5 letters using loop
+
+// let fruits=['Anar','Kiwi','Mango','Orange','Jackfruit'];
+//  for(let i=0;i<fruits.length;i++){
+//     if (fruits[i].length>5){
+//         console.log(fruits[i])
+//     }
+// }
+
+
+
+// Write a program to find the name of the youngest employee in an array of objects
+
+let employee=[
+    {name: 'Sulu', age: 20},
+    {name: 'Rashi', age: 23},
+    {name: 'Fahad', age: 30},
+];
+let young=employee[0];
+
+for (let i=1; i<employee.length; i++){
+    if (employee[i].age < young.age){
+        young=employee[i];  
+    }
+}
+console.log("Youngest Employee:", young.name, "\nAge:", young.age);
